@@ -20,6 +20,25 @@ export const getEvents = async (req, res) => {
   }
 };
 
+// export const getAllEvents = async (req, res) => {
+//   try {
+//     const events = await Event.find().sort({ start: 1 });
+//     res.status(200).json(events);
+//   } catch (error) {
+//     res.status(500).json({ error: 'Failed to fetch events', details: error.message });
+//   }
+// };
+
+// export const getAllEvents = async (req, res) => {
+//   try {
+//     const { userId } = req.params;
+//     const events = await Event.find({ userId });
+//     res.status(200).json(events);
+//   } catch (error) {
+//     res.status(500).json({ error: 'Failed to fetch events', details: error.message });
+//   }
+// };
+
 export const updateEvent = async (req, res) => {
   try {
     const { id } = req.params;
